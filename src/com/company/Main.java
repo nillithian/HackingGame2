@@ -43,6 +43,8 @@ public class Main {
 
             } else {
                 System.out.println ( "Correct!" );
+            
+
                 counter=3;
             }
 
