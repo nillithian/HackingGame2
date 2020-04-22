@@ -13,24 +13,17 @@ public class Main {
         Menu.intro ();
         Menu.gameMenu ();
         ArrayList<String> passwords = gameStart ();
-        System.out.println (passwords );
-       String password = Scrambler.randomPassword ( passwords );
-        System.out.println (password );
+        String password = Scrambler.randomPassword ( passwords );
         String scrambledPass = Scrambler.scrambledWord ( password );
-        System.out.println (scrambledPass );
         startSentence (scrambledPass);
         game (password);
-
-
-
-
 
     }
 
 
 
     public static void startSentence(String scrambledPassword){
-        System.out.println ("type in the password: " + "(hint)" + scrambledPassword);
+        System.out.println ("Type in the password: " + "(hint: " + scrambledPassword + " )");
     }
 
     public static void game(String password) {
@@ -46,8 +39,6 @@ public class Main {
 
                 if ( counter == 3 ) {
                     System.out.println ( "Too many failed attempts! Start over!" );
-//                    Menu.gameStart ( );
-
                 }
 
             } else {
