@@ -1,13 +1,17 @@
 package com.company;
+//Clasa meniu trebuie doar sa iti zica ce ai ales si sa iti faca return la acel element.
 
-import java.sql.SQLOutput;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Menu {
     static Scanner scanner = new Scanner(System.in);
+    private static String password;
 
 
-public static void gameStart() {
+    public static ArrayList<String> gameStart() {
+    ArrayList<String> passwords;
     gameMenu ( );
 
     do  {
@@ -15,11 +19,16 @@ public static void gameStart() {
         int option = getOption ( );
 
         if ( option == 1 ) {
-            Anaf.anafGame ( );
+
+            passwords = Anaf.anafPasswords ();
+            return passwords;
         } else if ( option == 2 ) {
-            Cnass.cnassStartGame ( );
+
+            passwords = Cnass.cnassPasswords ();
+            return passwords;
         } else if ( option == 3 ) {
-            NeighborWifi.wifiStartGame ( );
+            passwords = NeighborWifi.wifiPasswords ();
+            return passwords;
         } else if ( option == 4 ) {
             System.out.println ( "Exiting. " );
             break;
@@ -29,6 +38,7 @@ public static void gameStart() {
         }
     }
     while (true) ;
+    return null;
 }
 
     public static void gameMenu() {
@@ -38,7 +48,7 @@ public static void gameStart() {
         System.out.println ("4. Exit Game" );
 
 
-}
+    }
 
     public static void intro(){
         System.out.println ("Welcome to the Hacking game. " );

@@ -1,13 +1,12 @@
 package com.company;
 
-import java.util.Collections;
-import java.util.List;
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Scrambler {
 
 public static String scrambledWord(){
-//    String g = Anaf.anafPasswords ();
+    String g = randomPassword ();
 
     char[] chars= g.toCharArray ();
     Random rgen = new Random();  // Random number generator
@@ -20,5 +19,13 @@ public static String scrambledWord(){
     }
 
     return String.valueOf ( chars );
+}
+
+public static String randomPassword(){
+    ArrayList<String> passwords = Menu.gameStart ();
+    Random rand = new Random();
+    String randomElement;
+    randomElement = passwords.get(rand.nextInt(passwords.size()));
+    return randomElement;
 }
 }
