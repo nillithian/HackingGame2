@@ -15,19 +15,17 @@ public class Passwords {
     public Passwords(int type) {
         if ( type == 1 ) {
             passwords = anafPasswords;
-
         } else if ( type == 2 ) {
             passwords = cnassPasswords;
-
         } else if ( type == 3 ) {
             passwords = neighbourPasswords;
-
         }
     }
 
     public ArrayList<String> getPasswords() {
         return passwords;
     }
+
 
 
 }

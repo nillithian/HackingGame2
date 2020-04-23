@@ -43,7 +43,6 @@ public class Main {
 
             } else {
                 System.out.println ( "Correct!" );
-            
 
                 counter=3;
             }
@@ -65,6 +64,7 @@ public class Main {
             } else {
                 Passwords passwords = new Passwords ( option );
                 return passwords.getPasswords ( );
+
             }
 
         }

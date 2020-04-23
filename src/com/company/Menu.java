@@ -19,7 +19,7 @@ public class Menu {
 
     public static void intro(){
         System.out.println ("Welcome to the Hacking game. " );
-        System.out.println("What would you like to hack today? : ");
+        System.out.println ("What would you like to hack today? : ");
 
     }
 
