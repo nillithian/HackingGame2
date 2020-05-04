@@ -3,6 +3,7 @@ package com.company;
 public class Reward {
 
     private String reward;
+
     public Reward(int type) {
         if ( type == 1 ) {
             reward = rewardAnaf;
@@ -96,7 +97,7 @@ private String rewardWifi =     "                              ,--.\"\"\n" +
                                 "          (,(,---;;;;;  \\ \\|;;;)\n" +
                                 "                      `._\\_\\";
 
-    public static void rewardAnaf(){
+    private static void rewardAnaf(){
 
         String reward = "                           \" ____\\n\" +\n" +
                         "                \"                 _.' :  `._\\n\" +\n" +
@@ -131,7 +132,7 @@ private String rewardWifi =     "                              ,--.\"\"\n" +
 
     }
 
-    public static void rewardCnass(){
+    private static void rewardCnass(){
     System.out.println (
             "_____________________                              _____________________\n" +
             "`-._:  .:'   `:::  .:\\           |\\__/|           /::  .:'   `:::  .:.-'\n" +
@@ -150,7 +151,7 @@ private String rewardWifi =     "                              ,--.\"\"\n" +
             "                                   \\/ " );
 }
 
-    public static void rewardWifi(){
+    private static void rewardWifi(){
     System.out.println (
             "                         ,--.\"\"\n" +
             "                      __,----( o ))\n" +

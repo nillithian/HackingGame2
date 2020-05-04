@@ -1,5 +1,7 @@
 package com.company;
 
+
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -12,11 +14,14 @@ public class Main {
     public static void main(String[] args) {
         Menu.intro ();
         Menu.gameMenu ();
-        ArrayList<String> passwords = gameStart ();
+        Passwords gameOption = gameStart ();
+        ArrayList<String> passwords = gameOption.getPasswords ();
+        String reward = gameOption.getReward ();
         String password = Scrambler.randomPassword ( passwords );
+
         String scrambledPass = Scrambler.scrambledWord ( password );
         startSentence (scrambledPass);
-        game (password);
+        game (password,reward);
 
     }
 
@@ -26,7 +31,7 @@ public class Main {
         System.out.println ("Type in the password: " + "(hint: " + scrambledPassword + " )");
     }
 
-    public static void game(String password) {
+    public static void game(String password,String reward) {
 
         int counter=0;
 
@@ -43,14 +48,14 @@ public class Main {
 
             } else {
                 System.out.println ( "Correct!" );
-
+                System.out.println ( reward);
                 counter=3;
             }
 
         }
     }
 
-    public static ArrayList<String> gameStart() {
+    public static Passwords gameStart() {
 
 
         do  {
@@ -63,7 +68,7 @@ public class Main {
                 System.out.println ("Incorrect selection. Type a Number from 1 to 4 to select a Menu Option. " );
             } else {
                 Passwords passwords = new Passwords ( option );
-                return passwords.getPasswords ( );
+                return passwords;
 
             }
 
