@@ -63,7 +63,7 @@ public class Main {
             int option = Menu.getOption ();
             if ( option == 4 ) {
                 System.out.println ( "Exiting. " );
-                break;
+                System.exit(0);
             } else if (option > 4){
                 System.out.println ("Incorrect selection. Type a Number from 1 to 4 to select a Menu Option. " );
             } else {
@@ -74,7 +74,6 @@ public class Main {
 
         }
         while (true) ;
-        return null;
     }
 
 }
